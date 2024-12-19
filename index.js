@@ -632,7 +632,7 @@ app.get('/wakamc', async (req, res) => {
         res.render('wakamusic', { tracks: tracks , query: query });
     } catch (error) {
         console.error('Error occurred while searching:', error);
-        res.status(500).send('えらー。あらら');
+        res.status(500).send('エラー');
     }
 });
 
@@ -735,13 +735,13 @@ app.get('/suggest', (req, res) => {
                 res.json(suggestions);
             } catch (error) {
                 console.error('JSON parse error:', error);
-                res.status(500).send({ error: 'えらー。あらら' });
+                res.status(500).send({ error: 'エラー' });
             }
         });
     });
     request.on('error', (error) => {
         console.error('Request error:', error);
-        res.status(500).send({ error: 'えらー。あらら' });
+        res.status(500).send({ error: 'エラー' });
     });
     request.end();
 });
