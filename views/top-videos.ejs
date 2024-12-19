@@ -166,16 +166,14 @@ p.description {
       <form class="d-flex" action="/s">
         <input type="text" name="q" class="form-control" placeholder="キリ番ダネー" required>
       </form>
-      <button class="btn btn-link" id="loadVideosButton">もっと遊ぶ</button>
+      <button class="btn btn-link" id="loadVideosButton">データ取得数の変更</button>
     </div>
   </header>
 
   <div class="container">
     <h1>ランキング👑</h1>
     <p class="description">わかめtubeで直近で再生された<%= count > 1000 ? 1000 : count %>
-件の動画の中での再生数ランキングです。一応、右上の「もっと遊ぶ」から何件までのデータを参照するかを指定できます。<br>
-    なんか友達に「面白そう」って言われたので作ってみました(・∀・)。<br>
-    感想: 僕が開発のための動作確認に使っている曲が上の方に来てるな、と言う印象。このページを見れば最近わかめくんがよく聴く曲がわかります。たぶん</p>
+件の動画の中での再生数ランキングです。一応、右上の「データ取得数の変更」から何件までのデータを参照するかを指定できます。<br>
 
   <section class="results">
     <div class="results-container">
@@ -202,7 +200,7 @@ p.description {
             if (count && !isNaN(count) && count > 0) {
                 window.location.href = `/topvideos?count=${count}`;
             } else {
-                alert("ちゃんとした数字が入力されていません。");
+                alert("数字が正しく入力されていません。");
             }
         });
     </script>

@@ -25,11 +25,11 @@
 <body>
 <header>
   <div class="banner">
-   <button class="btn btn-link" onclick="window.location.href='/'">ホーム🏠</button>
+   <button class="btn btn-link" onclick="window.location.href='/'">ホーム</button>
    <button class="btn btn-link" onclick="window.location.href='/send'">問い合わせ</button>
   <button class="btn btn-link" onclick="window.location.href='/blog/help'">ヘルプ</button>
       <form class="d-flex" action="/s" method="get">
-          <input id="searchbox" name="q" class="form-control" type="text" placeholder="キーワードを入力..." aria-label="Search" required>
+          <input id="searchbox" name="q" class="form-control" type="text" placeholder="キーワードを入力…" aria-label="Search" required>
       </form>
    <button class="btn btn-link" id="menu-btn" style="position: absolute; right: 10px;">ツール</button>
  </div>
@@ -37,13 +37,13 @@
 <nav id="side-menu" class="side-menu">
     <ul>
         <li><label for="loopCheck" class="custom-checkbox">
-        ループ再生する
+        ループ再生
         <input type="checkbox" id="loopCheck">
         <span class="checkmark"></span>
         </label></li>
         <li><a href="<%= videoData.stream_url %>" target="_blank">ストリームURLに移動</a></li>
-        <li><a href="/ll/<%= videoData.videoId %>">音のみで再生する</a></li>
-        <li><a href="/www/<%= videoData.videoId %>">高画質で再生する</a></li>
+        <li><a href="/ll/<%= videoData.videoId %>">音声のみ再生</a></li>
+        <li><a href="/www/<%= videoData.videoId %>">高画質で再生</a></li>
         <li><a href="/vi/<%= videoData.videoId %>/maxresdefault.jpg" target="_blank">サムネイルをダウンロード</a></li>
         <li><a href="/wakameokini">お気に入りへ移動</a></li>
         <li><a href="/wakamehistory">再生履歴</a></li>
@@ -57,12 +57,12 @@
     </div>
   <video id="wakameVideo" controls autoplay poster="/vi/<%= videoData.videoId %>/maxresdefault.jpg">
     <source src="<%= videoData.stream_url %>" type="video/mp4">
-    読み込み失敗。ブラウザをアップデートしてどうぞ。
+    読み込み失敗しました。ブラウザをアップデートしてください。
   </video>
 </div>
 <div class="card">
   <div class="toolcard-header">
-    <small class="text-muted">「ツール」は右上に移動しました。</small>
+    <small class="text-muted">ツールは右上に移動しました。</small>
     <small class="text-muted float-right"><button class="favorite-btn" onclick="toggleFavorite('<%= videoData.videoId %>', '<%= videoData.channelId %>', '<%= videoData.channelName %>','<%= videoData.videoTitle %>')">お気に入り</button><button id="reloadButton">動画を再読み込み</button></small>
   </div>
   <div class="toolcard-header">

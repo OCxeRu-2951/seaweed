@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>わかめ🎶 - <%= query %></title>
+    <title>わかめ - <%= query %></title>
     <link rel="stylesheet" href="/css/wakamusic.css">
     <link rel="stylesheet" href="/css/slide.css">
 </head>
@@ -29,8 +29,8 @@
     <ul>
         <li><a href="/">ホーム</a></li>
         <li><a href="/wakams">わかめMusic</a></li>
-        <li><a href="/blog/wakamc">わかめMusicの使い方</a></li>
-        <li><a href="/famous">曲を聴く(旧サイト)</a></li>
+        <li><a href="/blog/wakamc">使い方</a></li>
+        <li><a href="/famous">旧サイトへ</a></li>
         <li><a href="/send" target="_blank">お問い合わせ</a></li>
         <li><a href="/blog/up" target="_blank">アップデートを確認</a></li>
     </ul>
@@ -149,10 +149,10 @@ function toggleFavorite(artwork_url, title, id) {
 
     if (favoriteIndex === -1) {
         favorites.push({ artwork_url, title, id });
-        alert('お気に入りに追加しました！');
+        alert('お気に入りに追加しました');
     } else {
         favorites.splice(favoriteIndex, 1);
-        alert('お気に入りを解除しました！');
+        alert('お気に入りを解除しました');
     }
 
     document.cookie = `wakamemusicfavorites=${encodeURIComponent(JSON.stringify(favorites))}; path=/; max-age=31536000`;

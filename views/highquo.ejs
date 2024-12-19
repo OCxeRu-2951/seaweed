@@ -20,10 +20,10 @@
 <body>
 <header>
   <div class="banner">
-   <button class="btn btn-link" onclick="window.location.href='/'">ホーム🏠</button>
+   <button class="btn btn-link" onclick="window.location.href='/'">ホーム</button>
    <button class="btn btn-link" onclick="window.location.href='/blog'">お知らせ</button>
    <form class="d-flex" action="/s">
-    <input type="text" name="q" class="form-control" placeholder="キーワードを入力..." required>
+    <input type="text" name="q" class="form-control" placeholder="キーワードを入力…" required>
    </form>
     <button class="btn btn-link" style="position: absolute; right: 10px;" onclick="window.location.href='/send'">問い合わせ</button>
  </div>
@@ -31,7 +31,7 @@
 <div class="card">
   <video controls autoplay preload="auto" id="video" poster="/vi/<%= videoData.videoId %>/maxresdefault.jpg">
     <source src="<%= videoData.highstreamUrl %>" type="video/mp4">
-    読み込み失敗。ブラウザをアップデートしてどうぞ。
+    読み込みに失敗しました。ブラウザをアップデートしてください。
   </video>
      <audio id="audio" controls>
         <source src="<%= videoData.audioUrl %>">
@@ -39,7 +39,7 @@
   </div>
 <div class="card">
   <div class="toolcard-header">
-    <small class="text-muted">音が流れない場合、再生を一時停止してもう一度再生してみて下さい。</small>
+    <small class="text-muted">音声が流れない場合、再生を一時停止してもう一度再生してみて下さい。</small>
   </div>
   <div class="toolcard-header">
     <small class="text-muted">ツール　<button id="reloadButton">動画を再読み込み</button></small>
