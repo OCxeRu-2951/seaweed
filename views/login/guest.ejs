@@ -20,7 +20,7 @@
 <body>
 <header>
   <div class="banner">
-   <button class="btn btn-link" onclick="window.location.href='/'">ホーム🏠</button>
+   <button class="btn btn-link" onclick="window.location.href='/'">ホーム</button>
    <button class="btn btn-link" onclick="window.location.href='/blog'">お知らせ</button>
   <!-- 他のボタンもここに追加できます -->
    <form class="d-flex" action="/s">
@@ -32,13 +32,13 @@
 <div class="card">
   <video controls autoplay>
     <source src="<%= stream_url %>" type="video/mp4">
-    読み込み失敗。ブラウザをアップデートしてどうぞ。
+    読み込み失敗しました。ブラウザをアップデートしてください。
   </video>
   <div class="card-header">
     <small class="text-muted float-left">ゲストとして再生中</small>
   </div>
   <div class="toolcard-header">
-    <small class="text-muted">ツール　　<button onclick="location.href='/login'">ログインする</button></small>
+    <small class="text-muted">ツール<button onclick="location.href='/login'">ログイン</button></small>
   </div>
   <div class="card-body">
     <h5></h5>

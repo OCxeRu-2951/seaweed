@@ -18,7 +18,7 @@
     }
 
     if (!validPasswords.includes(userInput)) {
-      document.body.innerHTML = "認証失敗";
+      document.body.innerHTML = "認証に失敗しました";
     } else {
       var now = new Date();
       now.setDate(now.getDate() + 7);
